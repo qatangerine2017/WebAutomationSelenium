@@ -168,3 +168,5 @@ D:\QA Automation SoftUni\Blog-Skeleton\Blog\bin\WebDriver.dll
 D:\QA Automation SoftUni\Blog-Skeleton\Blog\bin\WebDriver.Support.dll
 D:\QA Automation SoftUni\Blog-Skeleton\Blog\bin\WebDriver.xml
 D:\QA Automation SoftUni\Blog-Skeleton\Blog\bin\WebDriver.Support.xml
+C:\Users\Boriana.Lenovo\Downloads\WebAutomationSelenium-420124d2d688540668b52e3c6e0ced4c5fede9a6\WebAutomationSelenium-420124d2d688540668b52e3c6e0ced4c5fede9a6\Blog\obj\Debug\Blog.dll
+C:\Users\Boriana.Lenovo\Downloads\WebAutomationSelenium-420124d2d688540668b52e3c6e0ced4c5fede9a6\WebAutomationSelenium-420124d2d688540668b52e3c6e0ced4c5fede9a6\Blog\obj\Debug\Blog.pdb
