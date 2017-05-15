@@ -3,12 +3,63 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+using IntegrationTests.Models;
+using OpenQA.Selenium.Chrome;
+using IntegrationTests.Pages.RegistrationPage;
+using SeleniumDesignPatternsDemo.Models;
 
 namespace IntegrationTests
 {
     [TestFixture]
-    public class IntegrationTests
+    public class BlogIntegrationTests
     {
+        public IWebDriver driver;
+        private RegisterUser registrationUser;
+        private RegisterUser user;
+
+        [SetUp]
+        public void Init()
+        {
+            this.driver = new ChromeDriver();
+        }
+
+        public void Type(IWebElement element, string text)
+        {
+            element.Clear();
+            element.SendKeys(text);
+        }
+
+        //[TearDown]
+        //public void CleanUp()
+        //{
+        //    //if (TestContext.CurrentContext.Result.Outcome.Status == TestStatus.Failed)
+        //    //{
+        //    //    string filename = ConfigurationManager.AppSettings["Logs"] + TestContext.CurrentContext.Test.Name + ".txt";
+        //    //    if (File.Exists(filename))
+        //    //    {
+        //    //        File.Delete(filename);
+        //    //    }
+        //    //    File.WriteAllText(filename, TestContext.CurrentContext.Test.FullName + "        " + TestContext.CurrentContext.WorkDirectory + "            " + TestContext.CurrentContext.Result.PassCount);
+
+        //    //    var screenshot = ((ITakesScreenshot)this.driver).GetScreenshot();
+        //    //    screenshot.SaveAsFile(filename + TestContext.CurrentContext.Test.Name + ".jpg", ScreenshotImageFormat.Jpeg);
+        //    //}
+
+        //    this.driver.Quit();
+        //}
+
+        [Test, Property("RegistrationFormTests", 1)]
+        public void RegistrateWithOutFirstAndLastName()
+        {
+            var regPage = new RegistrationPage(this.driver);
+            user = AccessExcelData.GetTestData("RegistrateWithOutFirstAndLastName");
+
+            regPage.NavigateTo();
+            regPage.FillRegistrationForm();
+
+            regPage.AssertErrorMessages("This field is required");
+        }
+
         [Test]
         public void CheckSiteLoad()
         {
@@ -18,5 +69,8 @@ namespace IntegrationTests
             var logo = wait.Until(w => w.FindElement(By.XPath("/html/body/div[1]/div/div[1]/a")));
             NUnit.Framework.Assert.AreEqual("SOFTUNI BLOG", logo.Text);
         }
+
+
+
     }
 }

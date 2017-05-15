@@ -32,3 +32,6 @@ D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\obj\Debug\IntegrationTes
 D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\obj\Debug\IntegrationTests.pdb
 C:\Users\Boriana.Lenovo\Downloads\WebAutomationSelenium-420124d2d688540668b52e3c6e0ced4c5fede9a6\WebAutomationSelenium-420124d2d688540668b52e3c6e0ced4c5fede9a6\IntegrationTests\obj\Debug\IntegrationTests.dll
 C:\Users\Boriana.Lenovo\Downloads\WebAutomationSelenium-420124d2d688540668b52e3c6e0ced4c5fede9a6\WebAutomationSelenium-420124d2d688540668b52e3c6e0ced4c5fede9a6\IntegrationTests\obj\Debug\IntegrationTests.pdb
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\obj\Debug\IntegrationTests.csprojResolveAssemblyReference.cache
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\obj\Debug\IntegrationTests.dll
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\obj\Debug\IntegrationTests.pdb
