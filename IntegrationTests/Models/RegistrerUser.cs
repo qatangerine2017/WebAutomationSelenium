@@ -6,32 +6,32 @@ using System.Threading.Tasks;
 
 namespace IntegrationTests.Models
 {
-    class RegisterUser
+    public class RegisterUser
     {
-        private string key;
+        //private string key;
         private string email;
         private string fullName;
         private string password;
         private string confirmPassword;
 
-        public RegisterUser(String key,
+        public RegisterUser(//String key,
                             String email,
                             String fullName,
                             String password,
                             String confirmPassword)
         {
-            this.key = key;
+            //this.key = key;
             this.email = email;
             this.fullName = fullName;
             this.password = password;
             this.confirmPassword = confirmPassword;
         }
 
-        public string Key
-        {
-            get { return this.key; }
-            set { this.key = value; }
-        }
+        //public string Key
+        //{
+        //    get { return this.key; }
+        //    set { this.key = value; }
+        //}
 
         public string Email
         {

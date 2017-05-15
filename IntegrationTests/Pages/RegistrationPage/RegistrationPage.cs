@@ -19,7 +19,7 @@ namespace IntegrationTests.Pages.RegistrationPage
         {
             get
             {
-                return base.url + "Register/";
+                return base.Url + "Register/";
             }
         }
 
@@ -28,7 +28,7 @@ namespace IntegrationTests.Pages.RegistrationPage
             this.Driver.Navigate().GoToUrl(this.URL);
         }
 
-        public void FillRegistrationForm()
+        public void FillRegistrationForm(RegisterUser user)
         {
             Type(this.FullName, user.FullName);
             Type(this.Email, user.Email);

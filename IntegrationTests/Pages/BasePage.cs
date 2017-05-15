@@ -8,7 +8,8 @@ namespace IntegrationTests.Pages
 {
     public class BasePage
     {
-        protected string url = ConfigurationManager.AppSettings["URL"];
+        //protected string Url = ConfigurationManager.AppSettings["URL"];
+        public string Url = "http://localhost:60634/Article/List";
         private IWebDriver driver;
         private WebDriverWait wait;
 

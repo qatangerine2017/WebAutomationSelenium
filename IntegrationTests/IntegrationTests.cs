@@ -6,7 +6,6 @@ using OpenQA.Selenium.Support.UI;
 using IntegrationTests.Models;
 using OpenQA.Selenium.Chrome;
 using IntegrationTests.Pages.RegistrationPage;
-using SeleniumDesignPatternsDemo.Models;
 
 namespace IntegrationTests
 {
@@ -49,13 +48,16 @@ namespace IntegrationTests
         //}
 
         [Test, Property("RegistrationFormTests", 1)]
-        public void RegistrateWithOutFirstAndLastName()
+        public void RegisterWithOutData()
         {
             var regPage = new RegistrationPage(this.driver);
-            user = AccessExcelData.GetTestData("RegistrateWithOutFirstAndLastName");
+            RegisterUser user = new RegisterUser("",
+                                                 "",
+                                                 "",
+                                                 "");
 
-            regPage.NavigateTo();
-            regPage.FillRegistrationForm();
+            driver.Navigate().GoToUrl(@"http://localhost:60634/Article/List/Register");
+            regPage.FillRegistrationForm(user);
 
             regPage.AssertErrorMessages("This field is required");
         }

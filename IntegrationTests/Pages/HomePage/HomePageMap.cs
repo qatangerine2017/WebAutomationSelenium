@@ -18,7 +18,7 @@ namespace IntegrationTests.Pages.HomePage
         {
             get
             {
-                return url;
+                return Url;
             }
         }
 
