@@ -1,0 +1,68 @@
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\bin\Debug\IntegrationTests.dll.config
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\bin\Debug\IntegrationTests.dll
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\bin\Debug\IntegrationTests.pdb
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\bin\Debug\Castle.Core.dll
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\bin\Debug\nunit.framework.dll
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\bin\Debug\System.Web.Helpers.dll
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\bin\Debug\System.Web.Mvc.dll
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\bin\Debug\System.Web.Razor.dll
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\bin\Debug\System.Web.WebPages.dll
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\bin\Debug\System.Web.WebPages.Razor.dll
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\bin\Debug\TestStack.Seleno.dll
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\bin\Debug\WebDriver.dll
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\bin\Debug\WebDriver.Support.dll
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\bin\Debug\Castle.Core.xml
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\bin\Debug\nunit.framework.xml
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\bin\Debug\System.Web.Helpers.xml
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\bin\Debug\System.Web.Mvc.xml
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\bin\Debug\System.Web.Razor.xml
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\bin\Debug\System.Web.WebPages.xml
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\bin\Debug\System.Web.WebPages.Razor.xml
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\bin\Debug\TestStack.Seleno.pdb
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\bin\Debug\TestStack.Seleno.xml
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\bin\Debug\WebDriver.xml
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\bin\Debug\WebDriver.Support.xml
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\obj\Debug\IntegrationTests.csprojResolveAssemblyReference.cache
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\obj\Debug\IntegrationTests.dll
+D:\QA Automation SoftUni\Blog-Skeleton\IntegrationTests\obj\Debug\IntegrationTests.pdb
+C:\Users\Boriana.Lenovo\Downloads\WebAutomationSelenium-420124d2d688540668b52e3c6e0ced4c5fede9a6\WebAutomationSelenium-420124d2d688540668b52e3c6e0ced4c5fede9a6\IntegrationTests\obj\Debug\IntegrationTests.dll
+C:\Users\Boriana.Lenovo\Downloads\WebAutomationSelenium-420124d2d688540668b52e3c6e0ced4c5fede9a6\WebAutomationSelenium-420124d2d688540668b52e3c6e0ced4c5fede9a6\IntegrationTests\obj\Debug\IntegrationTests.pdb
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\obj\Debug\IntegrationTests.csprojResolveAssemblyReference.cache
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\obj\Debug\IntegrationTests.dll
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\obj\Debug\IntegrationTests.pdb
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\bin\Debug\Environment.config
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\bin\Debug\IntegrationTests.dll.config
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\bin\Debug\IntegrationTests.dll
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\bin\Debug\IntegrationTests.pdb
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\bin\Debug\Castle.Core.dll
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\bin\Debug\Dapper.dll
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\bin\Debug\nunit.framework.dll
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\bin\Debug\System.Web.Helpers.dll
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\bin\Debug\System.Web.Mvc.dll
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\bin\Debug\System.Web.Razor.dll
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\bin\Debug\System.Web.WebPages.dll
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\bin\Debug\System.Web.WebPages.Razor.dll
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\bin\Debug\TestStack.Seleno.dll
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\bin\Debug\WebDriver.dll
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\bin\Debug\WebDriver.Support.dll
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\bin\Debug\Castle.Core.xml
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\bin\Debug\Dapper.xml
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\bin\Debug\nunit.framework.xml
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\bin\Debug\System.Web.Helpers.xml
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\bin\Debug\System.Web.Mvc.xml
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\bin\Debug\System.Web.Razor.xml
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\bin\Debug\System.Web.WebPages.xml
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\bin\Debug\System.Web.WebPages.Razor.xml
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\bin\Debug\TestStack.Seleno.pdb
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\bin\Debug\TestStack.Seleno.xml
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\bin\Debug\WebDriver.xml
+D:\SoftUniQAAutomation\SeleniumTeamWork\IntegrationTests\bin\Debug\WebDriver.Support.xml
