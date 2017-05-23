@@ -34,18 +34,18 @@ namespace UnitTests
         //[TearDown]
         //public void CleanUp()
         //{
-        //    //if (TestContext.CurrentContext.Result.Outcome.Status == TestStatus.Failed)
-        //    //{
-        //    //    string filename = ConfigurationManager.AppSettings["Logs"] + TestContext.CurrentContext.Test.Name + ".txt";
-        //    //    if (File.Exists(filename))
-        //    //    {
-        //    //        File.Delete(filename);
-        //    //    }
-        //    //    File.WriteAllText(filename, TestContext.CurrentContext.Test.FullName + "        " + TestContext.CurrentContext.WorkDirectory + "            " + TestContext.CurrentContext.Result.PassCount);
+        //    if (TestContext.CurrentContext.Result.Outcome.Status == TestStatus.Failed)
+        //    {
+        //        string filename = ConfigurationManager.AppSettings["Logs"] + TestContext.CurrentContext.Test.Name + ".txt";
+        //        if (File.Exists(filename))
+        //        {
+        //            File.Delete(filename);
+        //        }
+        //        File.WriteAllText(filename, TestContext.CurrentContext.Test.FullName + "        " + TestContext.CurrentContext.WorkDirectory + "            " + TestContext.CurrentContext.Result.PassCount);
 
-        //    //    var screenshot = ((ITakesScreenshot)this.driver).GetScreenshot();
-        //    //    screenshot.SaveAsFile(filename + TestContext.CurrentContext.Test.Name + ".jpg", ScreenshotImageFormat.Jpeg);
-        //    //}
+        //        var screenshot = ((ITakesScreenshot)this.driver).GetScreenshot();
+        //        screenshot.SaveAsFile(filename + TestContext.CurrentContext.Test.Name + ".jpg", ScreenshotImageFormat.Jpeg);
+        //    }
 
         //    this.driver.Quit();
         //}
