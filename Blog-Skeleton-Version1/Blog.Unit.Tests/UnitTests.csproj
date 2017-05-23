@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BrowserHost.cs" />
+    <Compile Include="Models\RegistrerUser.cs" />
     <Compile Include="Pages\BasePage.cs" />
     <Compile Include="Pages\ChangePasswordPage\ChangePasswordPage.cs" />
     <Compile Include="Pages\ChangePasswordPage\ChangePasswordPageAsserter.cs" />

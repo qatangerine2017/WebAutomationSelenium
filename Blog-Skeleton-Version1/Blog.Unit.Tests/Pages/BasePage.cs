@@ -10,6 +10,7 @@ namespace UnitTests.Pages
 {
     public class BasePage
     {
+        public string Url = "http://localhost:60634/Article/List";
         private IWebDriver driver;
         private WebDriverWait wait;
 
