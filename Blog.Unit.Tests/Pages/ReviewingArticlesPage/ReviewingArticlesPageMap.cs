@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UnitTests.Pages.DeleteArticlePage
+namespace Blog.Unit.Tests.Pages.ReviewingArticles
 {
-    public partial class DeleteArticlePage
+    public partial class ReviewingArticlesPage
     {
         public IWebElement EmptyPage
         {
@@ -28,24 +28,5 @@ namespace UnitTests.Pages.DeleteArticlePage
                 return this.Driver.FindElement(By.XPath(xpath));
             }
         }
-        public IWebElement DeleteButton
-        {
-            get
-            {
-                var xpath = "/html/body/div[2]/div/article/footer/a[2]";
-                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
-                return this.Driver.FindElement(By.XPath(xpath));
-            }
-        }
-        public IWebElement ErrorMessageForDeletingArticle
-        {
-            get
-            {
-                var xpath = "//*[@id=\"content\"]";
-                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
-                return this.Driver.FindElement(By.XPath(xpath));
-            }
-        }
-
     }
 }

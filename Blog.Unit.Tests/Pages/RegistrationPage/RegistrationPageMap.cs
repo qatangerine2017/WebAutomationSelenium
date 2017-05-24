@@ -10,7 +10,14 @@ namespace UnitTests.Pages.RegistrationPage
 {
     public partial class RegistrationPage : BasePage
     {
-
+        public IWebElement RegistrationButton
+        {
+            get
+            {
+                var xpath = "//*[@id=\"registerLink\"]";
+                return this.Driver.FindElement(By.XPath(xpath));
+            }
+        }
         public IWebElement Email
         {
             get
@@ -47,7 +54,8 @@ namespace UnitTests.Pages.RegistrationPage
         {
             get
             {
-                return this.Driver.FindElement(By.Name("Register"));
+                var xpath = "/html/body/div[2]/div/div/form/div[6]/div/input";
+                return this.Driver.FindElement(By.XPath(xpath));
             }
         }
 
@@ -55,8 +63,9 @@ namespace UnitTests.Pages.RegistrationPage
         {
             get
             {
-                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath("//*[@id=\"logoutForm\"]/ul/li[2]/a")));
-                return this.Driver.FindElement(By.XPath("//*[@id=\"logoutForm\"]/ul/li[2]/a"));
+                var xpath = "//*[@id=\"logoutForm\"]/ul/li[2]/a";
+                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
+                return this.Driver.FindElement(By.XPath(xpath));
             }
         }
 
@@ -64,8 +73,18 @@ namespace UnitTests.Pages.RegistrationPage
         {
             get
             {
-                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath("/html/body/div[2]/div/div/form/div[1]")));
-                return this.Driver.FindElement(By.XPath("/html/body/div[2]/div/div/form/div[1]"));
+                var xpath = "/html/body/div[2]/div/div/form/div[1]";
+                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
+                return this.Driver.FindElement(By.XPath(xpath));
+            }            
+        }
+        public IWebElement RegistrateMessage
+        {
+            get
+            {
+                var xpath = "//*[@id=\"logoutForm\"]/ul/li[2]/a";
+                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
+                return this.Driver.FindElement(By.XPath(xpath));
             }
         }
     }

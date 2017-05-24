@@ -25,5 +25,9 @@ namespace UnitTests.Pages.RegistrationPage
             Assert.IsTrue(page.ErrorMessages.Displayed);
             StringAssert.Contains(text, page.ErrorMessages.Text);
         }
+        public static void AssertRegistrateMessage(this RegistrationPage page, string text)
+        {
+            Assert.AreEqual(text, page.RegistrateMessage.Text);
+        }
     }
 }
