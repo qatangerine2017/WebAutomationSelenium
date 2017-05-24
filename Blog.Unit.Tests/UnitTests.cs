@@ -51,7 +51,7 @@ namespace UnitTests
         //}
 
         [Test, Property("RegistrationFormTests", 1)]
-        public void RegisterWithOutData()
+        public void RegisterWithoutData()
         {
             var regPage = new RegistrationPage(this.driver);
             RegisterUser user = new RegisterUser("",
