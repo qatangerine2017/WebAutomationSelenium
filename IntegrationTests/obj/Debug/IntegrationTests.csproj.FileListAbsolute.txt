@@ -1,0 +1,16 @@
+D:\WebAutomationSelenium-master\IntegrationTests\obj\Debug\IntegrationTests.csprojResolveAssemblyReference.cache
+D:\WebAutomationSelenium-master\IntegrationTests\bin\Debug\IntegrationTests.dll.config
+D:\WebAutomationSelenium-master\IntegrationTests\bin\Debug\IntegrationTests.dll
+D:\WebAutomationSelenium-master\IntegrationTests\bin\Debug\IntegrationTests.pdb
+D:\WebAutomationSelenium-master\IntegrationTests\bin\Debug\EntityFramework.dll
+D:\WebAutomationSelenium-master\IntegrationTests\bin\Debug\EntityFramework.SqlServer.dll
+D:\WebAutomationSelenium-master\IntegrationTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\WebAutomationSelenium-master\IntegrationTests\bin\Debug\MySql.Data.dll
+D:\WebAutomationSelenium-master\IntegrationTests\bin\Debug\MySql.Data.Entity.EF6.dll
+D:\WebAutomationSelenium-master\IntegrationTests\bin\Debug\nunit.framework.dll
+D:\WebAutomationSelenium-master\IntegrationTests\bin\Debug\EntityFramework.xml
+D:\WebAutomationSelenium-master\IntegrationTests\bin\Debug\EntityFramework.SqlServer.xml
+D:\WebAutomationSelenium-master\IntegrationTests\bin\Debug\nunit.framework.xml
+D:\WebAutomationSelenium-master\IntegrationTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+D:\WebAutomationSelenium-master\IntegrationTests\obj\Debug\IntegrationTests.dll
+D:\WebAutomationSelenium-master\IntegrationTests\obj\Debug\IntegrationTests.pdb
