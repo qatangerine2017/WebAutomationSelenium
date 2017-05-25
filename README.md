@@ -19,3 +19,5 @@ SqlLocalDB.exe start "MSSQLLocalDB"
 1. open the project with Visual studio using BlogBuild.sln
 2. build solution
 3. run solution
+
+
