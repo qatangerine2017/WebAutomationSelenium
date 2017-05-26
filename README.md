@@ -28,4 +28,9 @@ SqlLocalDB.exe start "MSSQLLocalDB"
 8.5 Creating articles  Viara Vasileva (@Zviara)
 8.6 Editing Articles  Viara Vasileva (@Zviara)
 8.7 Deleting Articles  Hristina Mineva (@HristinaMineva91)
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/master
 
