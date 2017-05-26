@@ -86,6 +86,7 @@
   <ItemGroup>
     <Compile Include="BlogLoginTests.cs" />
     <Compile Include="BrowserHost.cs" />
+    <Compile Include="DeleteArticle.cs" />
     <Compile Include="Models\LoginUser.cs" />
     <Compile Include="Models\RegistrerUser.cs" />
     <Compile Include="Pages\BasePage.cs" />
@@ -113,6 +114,10 @@
     <Compile Include="Pages\RegistrationPage\RegistrationPage.cs" />
     <Compile Include="Pages\RegistrationPage\RegistrationPageAsserter.cs" />
     <Compile Include="Pages\RegistrationPage\RegistrationPageMap.cs" />
+    <Compile Include="Pages\ReviewingArticlePage\ReviewingArticlePage.cs" />
+    <Compile Include="Pages\ReviewingArticlePage\ReviewingArticlePageAsserter.cs" />
+    <Compile Include="Pages\ReviewingArticlePage\ReviewingArticlePageMap.cs" />
+    <Compile Include="ReviewingArticle.cs" />
     <Compile Include="UnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

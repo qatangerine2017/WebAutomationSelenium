@@ -30,6 +30,7 @@ namespace UnitTests.Pages.RegistrationPage
 
         public void FillRegistrationForm(RegisterUser user)
         {
+            this.RegistrationButton.Click();
             Type(this.FullName, user.FullName);
             Type(this.Email, user.Email);
             Type(this.Password, user.Password);

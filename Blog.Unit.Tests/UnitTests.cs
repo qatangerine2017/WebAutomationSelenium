@@ -16,13 +16,14 @@ namespace UnitTests
     public class UnitTests
     {
         public IWebDriver driver;
-        private RegisterUser registrationUser;
-        private RegisterUser user;
+    //    private RegisterUser registrationUser;
+    //    private RegisterUser user;
 
         [SetUp]
         public void Init()
         {
-            this.driver = new ChromeDriver();
+            this.driver = BrowserHost.Instance.Application.Browser;
+            this.driver.Manage().Window.Maximize();
         }
 
         public void Type(IWebElement element, string text)

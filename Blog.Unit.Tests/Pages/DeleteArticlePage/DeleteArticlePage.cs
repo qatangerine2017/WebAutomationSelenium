@@ -12,5 +12,17 @@ namespace UnitTests.Pages.DeleteArticlePage
         public DeleteArticlePage(IWebDriver driver) : base(driver)
         {
         }
+        public string URL
+        {
+            get
+            {
+                return base.Url + "Register/";
+            }
+        }
+
+        public void NavigateTo()
+        {
+            this.Driver.Navigate().GoToUrl(this.URL);
+        }
     }
 }

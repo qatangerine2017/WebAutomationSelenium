@@ -10,7 +10,15 @@ namespace UnitTests.Pages.RegistrationPage
 {
     public partial class RegistrationPage : BasePage
     {
-
+        public IWebElement RegistrationButton
+        {
+            get
+            {
+                var xpath = "//*[@id=\"registerLink\"]";
+                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
+                return this.Driver.FindElement(By.XPath(xpath));
+            }
+        }
         public IWebElement Email
         {
             get
@@ -47,7 +55,8 @@ namespace UnitTests.Pages.RegistrationPage
         {
             get
             {
-                return this.Driver.FindElement(By.Name("Register"));
+                var xpath = "/html/body/div[2]/div/div/form/div[6]/div/input";
+                return this.Driver.FindElement(By.XPath(xpath));
             }
         }
 
