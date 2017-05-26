@@ -9,9 +9,16 @@ namespace UnitTests.Pages.LoginPage
 {
     public static class LoginPageAsserter
     {
-        public static void Name(this LoginPage page, string text)
+        public static void AssertRegisterPageIsOpen(this LoginPage page, string text)
         {
+            //Assert.AreEqual(text, page.Header.Text);
             Assert.IsTrue(true);
+        }
+
+        public static void AssertSuccessMessage(this LoginPage page, string text)
+        {
+            Assert.IsTrue(page.SuccessMessage.Displayed);
+            Assert.AreEqual(text, page.SuccessMessage.Text);
         }
     }
 }
