@@ -1,4 +1,5 @@
 ﻿using Blog.Unit.Tests.Models;
+using Blog.Unit.Tests.Pages.ReviewingArticle;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -41,6 +42,27 @@ namespace UnitTests
             var logo = wait.Until(w => w.FindElement(By.XPath("/html/body/div[1]/div/div[1]/a")));
 
             Assert.AreEqual("SOFTUNI BLOG", logo.Text);
+        }
+        [Test]
+        public void CheckArticleIsCreated()
+        {
+            IWebDriver driver = BrowserHost.Instance.Application.Browser;
+            var email = "Katy" + DateTime.Now.Ticks + "@abv.bg";
+            var registrationPage = new RegistrationPage(this.driver);
+            var registrationUser = new RegisterUser(email, "Katy Perry", "0123456789", "0123456789");
+            registrationPage.NavigateTo();
+
+            registrationPage.FillRegistrationForm(registrationUser);
+
+            var createdArticle = new ReviewingArticlePage(this.driver);
+            if (createdArticle.EmptyPage.Displayed)
+            {
+                return;
+            }
+            else
+            {
+                createdArticle.AssertArticleIsCreated("The article was created!");
+            }
         }
     }
 }
