@@ -2,6 +2,7 @@
 using Blog.Unit.Tests.Pages.ReviewingArticle;
 using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace Blog.Unit.Tests
         [SetUp]
         public void Init()
         {
-            this.driver = BrowserHost.Instance.Application.Browser;
+            this.driver = new ChromeDriver();
             this.driver.Manage().Window.Maximize();
         }
 
