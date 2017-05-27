@@ -9,21 +9,34 @@ namespace UnitTests.Pages.RegistrationPage
 {
     public static class RegistrationPageAsserter
     {
-        //public static void AssertRegistrationPageIsOpen(this RegistrationPage page, string text)
-        //{
-        //    Assert.AreEqual(text, page.Header.Text);
-        //}
-
         public static void AssesrtSuccessMessage(this RegistrationPage page, string text)
         {
             Assert.IsTrue(page.SuccessMessage.Displayed);
             StringAssert.Contains(text, page.SuccessMessage.Text);
         }
 
-        public static void AssertErrorMessages(this RegistrationPage page, string text)
+        public static void AssertErrorMessageForEmail(this RegistrationPage page, string text)
         {
-            Assert.IsTrue(page.ErrorMessages.Displayed);
-            StringAssert.Contains(text, page.ErrorMessages.Text);
+            Assert.IsTrue(page.ErrorMessageForEmail.Displayed);
+            StringAssert.Contains(text, page.ErrorMessageForEmail.Text);
+        }
+
+        public static void AssertErrorMessageForFullName(this RegistrationPage page, string text)
+        {
+            Assert.IsTrue(page.ErrorMessageForFullName.Displayed);
+            StringAssert.Contains(text, page.ErrorMessageForFullName.Text);
+        }
+
+        public static void AssertErrorMessageForPassword(this RegistrationPage page, string text)
+        {
+            Assert.IsTrue(page.ErrorMessageForPassword.Displayed);
+            StringAssert.Contains(text, page.ErrorMessageForPassword.Text);
+        }
+
+        public static void AssertErrorMessageForPasswordMismatch(this RegistrationPage page, string text)
+        {
+            Assert.IsTrue(page.ErrorMessageForPasswordMismatch.Displayed);
+            StringAssert.Contains(text, page.ErrorMessageForPasswordMismatch.Text);
         }
     }
 }

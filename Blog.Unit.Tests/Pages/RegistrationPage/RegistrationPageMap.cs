@@ -69,12 +69,39 @@ namespace UnitTests.Pages.RegistrationPage
             }
         }
 
-        public IWebElement ErrorMessages
+        public IWebElement ErrorMessageForEmail
         {
             get
             {
-                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath("/html/body/div[2]/div/div/form/div[1]")));
-                return this.Driver.FindElement(By.XPath("/html/body/div[2]/div/div/form/div[1]"));
+                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath("/html/body/div[2]/div/div/form/div[1]/ul/li[1]")));
+                return this.Driver.FindElement(By.XPath("/html/body/div[2]/div/div/form/div[1]/ul/li[1]"));
+            }
+        }
+
+        public IWebElement ErrorMessageForFullName
+        {
+            get
+            {
+                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath("/html/body/div[2]/div/div/form/div[1]/ul/li[2]")));
+                return this.Driver.FindElement(By.XPath("/html/body/div[2]/div/div/form/div[1]/ul/li[2]"));
+            }
+        }
+
+        public IWebElement ErrorMessageForPassword
+        {
+            get
+            {
+                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath("/html/body/div[2]/div/div/form/div[1]/ul/li[3]")));
+                return this.Driver.FindElement(By.XPath("/html/body/div[2]/div/div/form/div[1]/ul/li[3]"));
+            }
+        }
+
+        public IWebElement ErrorMessageForPasswordMismatch
+        {
+            get
+            {
+                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath("/html/body/div[2]/div/div/form/div[1]/ul/li")));
+                return this.Driver.FindElement(By.XPath("/html/body/div[2]/div/div/form/div[1]/ul/li"));
             }
         }
     }

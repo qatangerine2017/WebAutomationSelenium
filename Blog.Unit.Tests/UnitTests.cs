@@ -16,8 +16,6 @@ namespace UnitTests
     public class UnitTests
     {
         public IWebDriver driver;
-    //    private RegisterUser registrationUser;
-    //    private RegisterUser user;
 
         [SetUp]
         public void Init()
@@ -30,40 +28,6 @@ namespace UnitTests
         {
             element.Clear();
             element.SendKeys(text);
-        }
-
-        //[TearDown]
-        //public void CleanUp()
-        //{
-        //    if (TestContext.CurrentContext.Result.Outcome.Status == TestStatus.Failed)
-        //    {
-        //        string filename = ConfigurationManager.AppSettings["Logs"] + TestContext.CurrentContext.Test.Name + ".txt";
-        //        if (File.Exists(filename))
-        //        {
-        //            File.Delete(filename);
-        //        }
-        //        File.WriteAllText(filename, TestContext.CurrentContext.Test.FullName + "        " + TestContext.CurrentContext.WorkDirectory + "            " + TestContext.CurrentContext.Result.PassCount);
-
-        //        var screenshot = ((ITakesScreenshot)this.driver).GetScreenshot();
-        //        screenshot.SaveAsFile(filename + TestContext.CurrentContext.Test.Name + ".jpg", ScreenshotImageFormat.Jpeg);
-        //    }
-
-        //    this.driver.Quit();
-        //}
-
-        [Test, Property("RegistrationFormTests", 1)]
-        public void RegisterWithoutData()
-        {
-            var regPage = new RegistrationPage(this.driver);
-            RegisterUser user = new RegisterUser("",
-                                                 "",
-                                                 "",
-                                                 "");
-
-            driver.Navigate().GoToUrl(@"http://localhost:60634/Article/List/Register");
-            regPage.FillRegistrationForm(user);
-
-            regPage.AssertErrorMessages("This field is required");
         }
 
         [Test]

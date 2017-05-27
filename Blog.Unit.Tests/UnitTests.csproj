@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BlogLoginTests.cs" />
+    <Compile Include="RegisterTests.cs" />
     <Compile Include="BrowserHost.cs" />
     <Compile Include="DeleteArticle.cs" />
     <Compile Include="Models\LoginUser.cs" />
