@@ -17,7 +17,7 @@ namespace UnitTests
         static BrowserHost()
         {
             //Instance.Run("Blog", 60634); // Runing for FireFox
-            Instance.Run("Blog", 60634, w => w.WithRemoteWebDriver(() => new ChromeDriver())); // Runing for chrome 
+            Instance.Run("Blog", 60639, w => w.WithRemoteWebDriver(() => new ChromeDriver())); // Runing for chrome 
                                     
         }
     }
