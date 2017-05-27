@@ -77,5 +77,20 @@ namespace Blog.Unit.Tests
 
             registrationPage.AssertErrorMessageForPasswordMismatch("The password and confirmation password do not match.");
         }
+
+        [Test]
+        [Author("Boriana Avramova")]
+        public void RegisterWithCorrectData()
+        {
+            var registrationPage = new RegistrationPage(this.driver);
+            RegisterUser user = new RegisterUser("a" + DateTime.Now.Ticks + "@a.a",
+                                                 "B A",
+                                                 "a",
+                                                 "a");
+
+            registrationPage.FillRegistrationForm(user);
+
+            registrationPage.AssesrtSuccessMessage("Hello");
+        }
     }
 }
