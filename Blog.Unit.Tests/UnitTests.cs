@@ -21,7 +21,7 @@ namespace UnitTests
         [SetUp]
         public void Init()
         {
-            this.driver = BrowserHost.Instance.Application.Browser;
+            this.driver =  BrowserHost.Instance.Application.Browser;
             this.driver.Manage().Window.Maximize();
         }
 
