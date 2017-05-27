@@ -33,13 +33,12 @@ namespace Blog.Unit.Tests
         [Author("Boriana Avramova")]
         public void RegisterWithoutData()
         {
-            IWebDriver driver = BrowserHost.Instance.Application.Browser;
             var registrationPage = new RegistrationPage(this.driver);
             RegisterUser user = new RegisterUser("",
                                                  "",
                                                  "",
                                                  "");
-
+            registrationPage.NavigateTo();
             registrationPage.FillRegistrationForm(user);
 
             registrationPage.AssertErrorMessageForEmail("The Email field is required.");
@@ -51,13 +50,12 @@ namespace Blog.Unit.Tests
         [Author("Boriana Avramova")]
         public void RegisterWithIncorrectMail()
         {
-            IWebDriver driver = BrowserHost.Instance.Application.Browser;
             var registrationPage = new RegistrationPage(this.driver);
             RegisterUser user = new RegisterUser("a",
                                                  "",
                                                  "",
                                                  "");
-
+            registrationPage.NavigateTo();
             registrationPage.FillRegistrationForm(user);
 
             registrationPage.AssertErrorMessageForEmail("The Email field is not a valid e-mail address.");
@@ -69,13 +67,12 @@ namespace Blog.Unit.Tests
         [Author("Boriana Avramova")]
         public void RegisterWithPasswordsMismatch()
         {
-            IWebDriver driver = BrowserHost.Instance.Application.Browser;
             var registrationPage = new RegistrationPage(this.driver);
             RegisterUser user = new RegisterUser("a@a.a",
                                                  "B A",
                                                  "a",
                                                  "");
-
+            registrationPage.NavigateTo();
             registrationPage.FillRegistrationForm(user);
 
             registrationPage.AssertErrorMessageForPasswordMismatch("The password and confirmation password do not match.");
@@ -85,13 +82,12 @@ namespace Blog.Unit.Tests
         [Author("Boriana Avramova")]
         public void RegisterWithCorrectData()
         {
-            IWebDriver driver = BrowserHost.Instance.Application.Browser;
             var registrationPage = new RegistrationPage(this.driver);
             RegisterUser user = new RegisterUser("a" + DateTime.Now.Ticks + "@a.a",
                                                  "B A",
                                                  "a",
                                                  "a");
-
+            registrationPage.NavigateTo();
             registrationPage.FillRegistrationForm(user);
 
             registrationPage.AssesrtSuccessMessage("Hello");
