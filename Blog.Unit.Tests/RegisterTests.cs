@@ -33,6 +33,7 @@ namespace Blog.Unit.Tests
         [Author("Boriana Avramova")]
         public void RegisterWithoutData()
         {
+            IWebDriver driver = BrowserHost.Instance.Application.Browser;
             var registrationPage = new RegistrationPage(this.driver);
             RegisterUser user = new RegisterUser("",
                                                  "",
@@ -50,6 +51,7 @@ namespace Blog.Unit.Tests
         [Author("Boriana Avramova")]
         public void RegisterWithIncorrectMail()
         {
+            IWebDriver driver = BrowserHost.Instance.Application.Browser;
             var registrationPage = new RegistrationPage(this.driver);
             RegisterUser user = new RegisterUser("a",
                                                  "",
@@ -67,6 +69,7 @@ namespace Blog.Unit.Tests
         [Author("Boriana Avramova")]
         public void RegisterWithPasswordsMismatch()
         {
+            IWebDriver driver = BrowserHost.Instance.Application.Browser;
             var registrationPage = new RegistrationPage(this.driver);
             RegisterUser user = new RegisterUser("a@a.a",
                                                  "B A",
@@ -82,6 +85,7 @@ namespace Blog.Unit.Tests
         [Author("Boriana Avramova")]
         public void RegisterWithCorrectData()
         {
+            IWebDriver driver = BrowserHost.Instance.Application.Browser;
             var registrationPage = new RegistrationPage(this.driver);
             RegisterUser user = new RegisterUser("a" + DateTime.Now.Ticks + "@a.a",
                                                  "B A",
