@@ -64,5 +64,41 @@ namespace UnitTests.Pages.CreateArticlePage
                 return this.Driver.FindElement(By.XPath(xpath));
             }
         }
+        public IWebElement ErrorMessageForArticleWithoutTitle
+        {
+            get
+            {
+                var xpath = "/html/body/div[2]/div/div/form/div[1]/ul/li";
+                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
+                return this.Driver.FindElement(By.XPath(xpath));
+            }
+        }
+        public IWebElement ErrorMessageForArticleWithoutContent
+        {
+            get
+            {
+                var xpath = "/html/body/div[2]/div/div/form/div[1]/ul/li";
+                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
+                return this.Driver.FindElement(By.XPath(xpath));
+            }
+        }
+        public IWebElement CombinationOfErrorMessagesWithoutTitle
+        { 
+            get
+            {
+                var xpath = "/html/body/div[2]/div/div/form/div[1]/ul/li[1]";
+                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
+                return this.Driver.FindElement(By.XPath(xpath));
+            }        
+        }
+        public IWebElement CombinationOfErrorMessagesWithoutContent
+        {
+            get
+            {
+                var xpath = "/html/body/div[2]/div/div/form/div[1]/ul/li[2]";
+                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
+                return this.Driver.FindElement(By.XPath(xpath));
+            }
+        }
     }
 }

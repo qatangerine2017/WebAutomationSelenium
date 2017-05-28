@@ -51,5 +51,63 @@ namespace Blog.Unit.Tests
 
             createdArticle.AssertArticleIsCreated("The new article is visible!");
         }
+        [Test]
+        [Author("Hristina Mineva")]
+        public void CheckArticleIsCreatedWithoutTitle()
+        {
+            var email = "Katy" + DateTime.Now.Ticks + "@abv.bg";
+            var registrationPage = new RegistrationPage(this.driver);
+            var registrationUser = new RegisterUser(email, "Katy Perry", "0123456789", "0123456789");
+            registrationPage.NavigateTo();
+
+            registrationPage.FillRegistrationForm(registrationUser);
+
+            var createdArticle = new CreateArticlePage(this.driver);
+
+            var newArticle = new Article("", "I am new article!");
+
+            createdArticle.CreateArticle(newArticle);
+
+            createdArticle.AssertArticleIsCreatedWithoutTitle("The Title field is required.");
+        }
+        [Test]
+        [Author("Hristina Mineva")]
+        public void CheckArticleIsCreatedWithoutContent()
+        {
+            var email = "Katy" + DateTime.Now.Ticks + "@abv.bg";
+            var registrationPage = new RegistrationPage(this.driver);
+            var registrationUser = new RegisterUser(email, "Katy Perry", "0123456789", "0123456789");
+            registrationPage.NavigateTo();
+
+            registrationPage.FillRegistrationForm(registrationUser);
+
+            var createdArticle = new CreateArticlePage(this.driver);
+
+            var newArticle = new Article("Hello!", "");
+
+            createdArticle.CreateArticle(newArticle);
+
+            createdArticle.AssertArticleCreatedWithoutContent("The Content field is required.");
+        }
+        [Test]
+        [Author("Hristina Mineva")]
+        public void CheckArticleIsCreatedWithoutTitleAndContent()
+        {
+            var email = "Katy" + DateTime.Now.Ticks + "@abv.bg";
+            var registrationPage = new RegistrationPage(this.driver);
+            var registrationUser = new RegisterUser(email, "Katy Perry", "0123456789", "0123456789");
+            registrationPage.NavigateTo();
+
+            registrationPage.FillRegistrationForm(registrationUser);
+
+            var createdArticle = new CreateArticlePage(this.driver);
+
+            var newArticle = new Article("", "");
+
+            createdArticle.CreateArticle(newArticle);
+
+            createdArticle.AssertArticleCreatedWithoutTitleAndContentFirstErrorMessage("The Title field is required.");
+            createdArticle.AssertArticleCreatedWithoutTitleAndContentSecondErrorMessage("The Content field is required.");
+        }
     }
 }
