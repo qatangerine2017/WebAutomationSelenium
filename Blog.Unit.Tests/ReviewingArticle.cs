@@ -21,7 +21,7 @@ namespace Blog.Unit.Tests
         [SetUp]
         public void Init()
         {
-            this.driver = new ChromeDriver();
+            this.driver = BrowserHost.Instance.Application.Browser;
             this.driver.Manage().Window.Maximize();
         }
 
