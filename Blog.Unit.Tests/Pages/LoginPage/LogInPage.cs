@@ -21,9 +21,9 @@ namespace UnitTests.Pages.LoginPage
 
         public void FillLoginForm(LoginUser user)
         {
-           // Type(this.Email, user.Email);
-           // Type(this.Password, user.Password);
-           // this.SubmitButton.Click();
+            Type(this.Email, user.Email);
+            Type(this.Password, user.Password);
+            //this.SubmitButton.Click();
         }
 
         private void Type(IWebElement element, string text)

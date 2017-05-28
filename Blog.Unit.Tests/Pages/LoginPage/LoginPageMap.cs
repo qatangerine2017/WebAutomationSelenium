@@ -27,7 +27,7 @@ namespace UnitTests.Pages.LoginPage
         }
 
 
-        public IWebElement SuccessMessage
+        public IWebElement SuccessMessageLogin
         {
             get
             {
@@ -40,7 +40,7 @@ namespace UnitTests.Pages.LoginPage
         // public IWebElement ErrorMessageForInvalidEmail
         // {
         //     get
-        //     {
+        //     {    
         //         this.Wait.Until(ExpectedConditions.ElementExists(By.XPath("//*[@id=\"pie_register\"]/li[8]/div/div/span")));
         //         return this.Driver.FindElement(By.XPath("//*[@id=\"pie_register\"]/li[8]/div/div/span"));
         //     }
