@@ -33,6 +33,7 @@ namespace Blog.Unit.Tests
         public void CheckArticleIsDeleted()
         {
             var article = new DeleteArticlePage(this.driver);
+            article.NavigateTo();
             if (article.EmptyPage.Displayed)
             {
                 article.AssertTheBlogIsEmpty("There aren't created articles!");
