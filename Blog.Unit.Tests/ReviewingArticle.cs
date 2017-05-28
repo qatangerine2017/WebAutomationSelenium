@@ -21,7 +21,7 @@ namespace Blog.Unit.Tests
         [SetUp]
         public void Init()
         {
-            this.driver = BrowserHost.Instance.Application.Browser;
+            this.driver = new ChromeDriver();
             this.driver.Manage().Window.Maximize();
         }
 
@@ -34,7 +34,7 @@ namespace Blog.Unit.Tests
         [Test]
         public void CheckArticleIsCreated()
         {
-            IWebDriver driver = BrowserHost.Instance.Application.Browser;
+          //  IWebDriver driver = BrowserHost.Instance.Application.Browser;
             var email = "Katy" + DateTime.Now.Ticks + "@abv.bg";
             var registrationPage = new RegistrationPage(this.driver);
             var registrationUser = new RegisterUser(email, "Katy Perry", "0123456789", "0123456789");
