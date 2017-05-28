@@ -9,9 +9,9 @@ namespace UnitTests.Pages.ChangePasswordPage
 {
     public static class ChangePasswordPageAsserter
     {
-        public static void Name (this ChangePasswordPage page, string text)
+        public static void AssertPasswordIsChange(this ChangePasswordPage page, string text)
         {
-            Assert.IsTrue(true);
+            Assert.AreEqual(text, page.SuccessMessage.Text);
         }
     }
 }

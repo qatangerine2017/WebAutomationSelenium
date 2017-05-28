@@ -10,11 +10,22 @@ namespace UnitTests.Pages.LoginPage
 {
     public partial class LoginPage
     {
+        public IWebElement LoginButton
+        {
+            get
+            {
+                var xpath = "//*[@id=\"loginLink\"]";
+                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
+                return this.Driver.FindElement(By.XPath(xpath));
+            }
+        }
         public IWebElement Email
         {
             get
             {
-                return this.Driver.FindElement(By.XPath("//*[@id=\"Email\"]"));
+                var xpath = "//*[@id=\"Email\"]";
+                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
+                return this.Driver.FindElement(By.XPath(xpath));
             }
         }
 
@@ -22,18 +33,28 @@ namespace UnitTests.Pages.LoginPage
         {
             get
             {
-                return this.Driver.FindElement(By.XPath("//*[@id=\"Password\"]"));
+                var xpath = "//*[@id=\"Password\"]";
+                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
+                return this.Driver.FindElement(By.XPath(xpath));
             }
         }
-
+        public IWebElement LogIn
+        {
+            get
+            {
+                var xpath = "/html/body/div[2]/div/div/form/div[4]/div/input";
+                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
+                return this.Driver.FindElement(By.XPath(xpath));
+            }
+        }
 
         public IWebElement SuccessMessage
         {
             get
             {
-                //  //*[@id="logoutForm"]/ul/li[2]/a 
-                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath("//*[@id=\"logoutForm\"]/ul/li[2]/a")));
-                return this.Driver.FindElement(By.XPath("//*[@id=\"logoutForm\"]/ul/li[2]/a"));
+                var xpath = "//*[@id=\"logoutForm\"]/ul/li[2]/a";
+                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
+                return this.Driver.FindElement(By.XPath(xpath));
             }
         }
 

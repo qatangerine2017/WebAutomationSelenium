@@ -18,12 +18,12 @@ namespace UnitTests.Pages.LoginPage
         {
             this.Driver.Navigate().GoToUrl("http://localhost:60634/Account/Login");
         }
-
         public void FillLoginForm(LoginUser user)
         {
-           // Type(this.Email, user.Email);
-           // Type(this.Password, user.Password);
-           // this.SubmitButton.Click();
+            this.LoginButton.Click();
+            Type(this.Email, user.Email);
+            Type(this.Password, user.Password);
+            this.LogIn.Click();
         }
 
         private void Type(IWebElement element, string text)

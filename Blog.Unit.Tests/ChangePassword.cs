@@ -1,5 +1,4 @@
 ﻿using Blog.Unit.Tests.Models;
-using Blog.Unit.Tests.Pages.ReviewingArticle;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -8,14 +7,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UnitTests;
-using UnitTests.Pages.CreateArticlePage;
+using UnitTests.Pages.ChangePasswordPage;
 using UnitTests.Pages.RegistrationPage;
 
 namespace Blog.Unit.Tests
 {
     [TestFixture]
-    public class ReviewingArticle
+    public class ChangePassword
     {
         private IWebDriver driver;
 
@@ -25,16 +23,14 @@ namespace Blog.Unit.Tests
             this.driver = new ChromeDriver();
             this.driver.Manage().Window.Maximize();
         }
-
         [TearDown]
         public void CleanUp()
         {
             this.driver.Quit();
         }
-
         [Test]
         [Author("Hristina Mineva")]
-        public void CheckArticleIsCreated()
+        public void CheckThePasswordIsChanged()
         {
             var email = "Katy" + DateTime.Now.Ticks + "@abv.bg";
             var registrationPage = new RegistrationPage(this.driver);
@@ -43,13 +39,11 @@ namespace Blog.Unit.Tests
 
             registrationPage.FillRegistrationForm(registrationUser);
 
-            var createdArticle = new CreateArticlePage(this.driver);
+            var changePasswordPage = new ChangePasswordPage(this.driver);
+            var newPassword = new Password("0123456789", "9876543210", "9876543210");
+            changePasswordPage.ChangePassword(newPassword);
 
-            var newArticle = new Article("Hello!", "I am new article!");
-
-            createdArticle.CreateArticle(newArticle);
-
-            createdArticle.AssertArticleIsCreated("The new article is visible!");
+            changePasswordPage.AssertPasswordIsChange("Your password has been changed.");
         }
     }
 }

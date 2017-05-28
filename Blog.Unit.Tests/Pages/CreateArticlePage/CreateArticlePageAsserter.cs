@@ -9,9 +9,9 @@ namespace UnitTests.Pages.CreateArticlePage
 {
     public static class CreateArticlePageAsserter
     {
-        public static void Name(this CreateArticlePage page, string text)
+        public static void AssertArticleIsCreated(this CreateArticlePage page, string text)
         {
-            Assert.IsTrue(true);
+            Assert.IsTrue(page.NewArticle.Displayed);
         }
     }
 }
