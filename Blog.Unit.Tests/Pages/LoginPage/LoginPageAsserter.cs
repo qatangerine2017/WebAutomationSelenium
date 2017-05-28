@@ -15,10 +15,10 @@ namespace UnitTests.Pages.LoginPage
             Assert.IsTrue(true);
         }
 
-        public static void AssertSuccessMessage(this LoginPage page, string text)
+        public static void AssertSuccessMessageLogin(this LoginPage page, string text)
         {
-            Assert.IsTrue(page.SuccessMessage.Displayed);
-            Assert.AreEqual(text, page.SuccessMessage.Text);
+            Assert.IsTrue(page.SuccessMessageLogin.Displayed);
+            Assert.AreEqual(text, page.SuccessMessageLogin.Text);
         }
     }
 }

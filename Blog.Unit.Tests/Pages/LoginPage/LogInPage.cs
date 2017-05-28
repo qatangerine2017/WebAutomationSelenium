@@ -24,6 +24,10 @@ namespace UnitTests.Pages.LoginPage
             Type(this.Email, user.Email);
             Type(this.Password, user.Password);
             this.LogIn.Click();
+            Type(this.Email, user.Email);
+            Type(this.Password, user.Password);
+            this.LogIn.Click();
+            //this.SubmitButton.Click();
         }
 
         private void Type(IWebElement element, string text)
