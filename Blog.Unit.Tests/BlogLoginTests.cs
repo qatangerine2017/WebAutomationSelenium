@@ -18,13 +18,12 @@ namespace Blog.Unit.Tests
     [TestFixture]
     public class BlogLoginTests
     {
-       // private IWebDriver driver;
-        IWebDriver driver = BrowserHost.Instance.Application.Browser;
+        private IWebDriver driver;
 
         [SetUp]
         public void Init()
         {
-        //    this.driver = new ChromeDriver();
+            this.driver = new ChromeDriver();
             this.driver.Manage().Window.Maximize();
         }
 
