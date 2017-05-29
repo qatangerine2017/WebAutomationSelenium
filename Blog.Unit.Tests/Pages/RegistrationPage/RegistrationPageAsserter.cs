@@ -9,7 +9,7 @@ namespace UnitTests.Pages.RegistrationPage
 {
     public static class RegistrationPageAsserter
     {
-        public static void AssesrtSuccessMessage(this RegistrationPage page, string text)
+        public static void AssertSuccessMessage(this RegistrationPage page, string text)
         {
             Assert.IsTrue(page.SuccessMessage.Displayed);
             StringAssert.Contains(text, page.SuccessMessage.Text);

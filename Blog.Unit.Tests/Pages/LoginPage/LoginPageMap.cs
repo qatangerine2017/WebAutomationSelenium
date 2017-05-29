@@ -19,6 +19,7 @@ namespace UnitTests.Pages.LoginPage
                 return this.Driver.FindElement(By.XPath(xpath));
             }
         }
+
         public IWebElement Email
         {
             get
@@ -38,11 +39,22 @@ namespace UnitTests.Pages.LoginPage
                 return this.Driver.FindElement(By.XPath(xpath));
             }
         }
+
         public IWebElement LogIn
         {
             get
             {
                 var xpath = "/html/body/div[2]/div/div/form/div[4]/div/input";
+                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
+                return this.Driver.FindElement(By.XPath(xpath));
+            }
+        }
+        
+        public IWebElement LogOffButton
+        {
+            get
+            {
+                var xpath = "//*[@id=\"logoutForm\"]/ul/li[3]/a";
                 this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
                 return this.Driver.FindElement(By.XPath(xpath));
             }

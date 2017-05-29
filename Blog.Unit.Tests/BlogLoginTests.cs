@@ -18,7 +18,6 @@ namespace Blog.Unit.Tests
     [TestFixture]
     public class BlogLoginTests
     {
-        //public IWebDriver driver;
         IWebDriver driver = BrowserHost.Instance.Application.Browser;
 
         [SetUp]
@@ -39,38 +38,25 @@ namespace Blog.Unit.Tests
             element.SendKeys(text);
         }
 
-        // -------REGISTER--------
-        // 1. Navigate to home page
-        // 2. Navigate/click on Register
-        // 3. Fill register form
-        // 4. Click Register bitton
-        //     4.1. Check success message?
-        // -------LOG OFF--------
-        // 5. Click Log off button
-        //     4.1. Check home page loaded
-        // -------LOGIN--------
-        // 6. Click Login button
-        // 7. Fill Login form
-        // 8. Click Login button
-        // 9. Check for success message
-
-        public void NavigateToLoginPage()
+        [Test]
+        [Author("Adelina Yanakieva")]
+        public void CheckIsLoggedInWithValidData()
         {
             var email = "Lili" + DateTime.Now.Ticks + "@mail.bg";
+            var password = "0123456789";
             var registrationPage = new RegistrationPage(this.driver);
-            var registrationUser = new RegisterUser(email, "Lili Ivanova", "0123456789", "0123456789");
+            var registrationUser = new RegisterUser(email, "Lili Ivanova", password, password);
             registrationPage.NavigateTo();
 
-            registrationPage.FillRegistrationForm(registrationUser);
+            registrationPage.FillRegistrationForm(registrationUser); 
 
-            // var homePage = new HomePage(driver);
-            var loginPage = new LoginPage(driver);
-            // PageFactory.InitElements(this.driver, homePage);
+            var loginPage = new LoginPage(this.driver);
+            loginPage.LogOffButton.Click();   // ok
+            loginPage.LoginButton.Click();
+            var loginUser = new LoginUser(email, "0123456789");
+            loginPage.FillLoginForm(loginUser);
 
-            //homePage.NavigateTo();
-            // homePage.RegisterButton.Click();
-
-            // loginPage.AssertLoginPageIsOpen("Registration");
+            loginPage.AssertSuccessMessageLogin("Hello");
         }
 
     }
