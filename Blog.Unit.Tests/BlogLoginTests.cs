@@ -72,7 +72,7 @@ namespace Blog.Unit.Tests
             var loginUser = new LoginUser(email, password);
             loginPage.FillLoginForm(loginUser);
 
-            loginPage.AssertSuccessMessageLogin("Hello");
+            loginPage.AssertSuccessMessageLogin("Hello " + email + "!");
         }
 
         [Test]
