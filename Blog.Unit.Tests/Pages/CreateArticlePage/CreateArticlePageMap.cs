@@ -19,6 +19,7 @@ namespace UnitTests.Pages.CreateArticlePage
                 return this.Driver.FindElement(By.XPath(xpath));
             }
         }
+
         public IWebElement Title
         {
             get
@@ -28,6 +29,7 @@ namespace UnitTests.Pages.CreateArticlePage
                 return this.Driver.FindElement(By.XPath(xpath));
             }
         }
+
         public IWebElement Content
         {
             get
@@ -37,6 +39,7 @@ namespace UnitTests.Pages.CreateArticlePage
                 return this.Driver.FindElement(By.XPath(xpath));
             }
         }
+
         public IWebElement CreateArticleButton
         {
             get
@@ -46,6 +49,7 @@ namespace UnitTests.Pages.CreateArticlePage
                 return this.Driver.FindElement(By.XPath(xpath));
             }
         }
+
         public IWebElement NewArticle
         {
             get
@@ -55,6 +59,7 @@ namespace UnitTests.Pages.CreateArticlePage
                 return this.Driver.FindElement(By.XPath(xpath));
             }
         }
+
         public IWebElement LogOffButton
         {
             get
@@ -64,6 +69,7 @@ namespace UnitTests.Pages.CreateArticlePage
                 return this.Driver.FindElement(By.XPath(xpath));
             }
         }
+
         public IWebElement ErrorMessageForArticleWithoutTitle
         {
             get
@@ -73,6 +79,7 @@ namespace UnitTests.Pages.CreateArticlePage
                 return this.Driver.FindElement(By.XPath(xpath));
             }
         }
+
         public IWebElement ErrorMessageForArticleWithoutContent
         {
             get
@@ -82,6 +89,7 @@ namespace UnitTests.Pages.CreateArticlePage
                 return this.Driver.FindElement(By.XPath(xpath));
             }
         }
+
         public IWebElement CombinationOfErrorMessagesWithoutTitle
         { 
             get
@@ -91,6 +99,7 @@ namespace UnitTests.Pages.CreateArticlePage
                 return this.Driver.FindElement(By.XPath(xpath));
             }        
         }
+
         public IWebElement CombinationOfErrorMessagesWithoutContent
         {
             get

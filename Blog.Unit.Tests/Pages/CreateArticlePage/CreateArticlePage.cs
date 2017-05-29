@@ -13,6 +13,7 @@ namespace UnitTests.Pages.CreateArticlePage
         public CreateArticlePage(IWebDriver driver) : base(driver)
         {
         }
+
         public void CreateArticle(Article article)
         {
             this.CreateButton.Click();
@@ -20,6 +21,7 @@ namespace UnitTests.Pages.CreateArticlePage
             Type(this.Content, article.Content);
             this.CreateArticleButton.Click();
         }
+
         private void Type(IWebElement element, string text)
         {
             element.Clear();

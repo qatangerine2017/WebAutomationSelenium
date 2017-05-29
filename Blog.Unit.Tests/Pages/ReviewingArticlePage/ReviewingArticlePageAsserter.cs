@@ -14,18 +14,22 @@ namespace Blog.Unit.Tests.Pages.ReviewingArticle
         {
             Assert.IsNotEmpty(article.CreatedArticle.Text);
         }
+
         public static void AssertArticleIsCreatedWithoutTitle(this CreateArticlePage page, string text)
         {
             Assert.AreEqual(text, page.ErrorMessageForArticleWithoutTitle.Text);
         }
+
         public static void AssertArticleCreatedWithoutContent(this CreateArticlePage page, string text)
         {
             Assert.AreEqual(text, page.ErrorMessageForArticleWithoutContent.Text);
         }
+
         public static void AssertArticleCreatedWithoutTitleAndContentFirstErrorMessage(this CreateArticlePage page, string text)
         {
             Assert.AreEqual(text, page.CombinationOfErrorMessagesWithoutTitle.Text);
         }
+
         public static void AssertArticleCreatedWithoutTitleAndContentSecondErrorMessage(this CreateArticlePage page, string text)
         {
             Assert.AreEqual(text, page.CombinationOfErrorMessagesWithoutContent.Text);

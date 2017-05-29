@@ -91,7 +91,7 @@ namespace Blog.Unit.Tests
             registrationPage.NavigateTo();
             registrationPage.FillRegistrationForm(user);
 
-            registrationPage.AssesrtSuccessMessage("Hello");
+            registrationPage.AssertSuccessMessage("Hello");
         }
     }
 }

@@ -20,5 +20,11 @@ namespace UnitTests.Pages.LoginPage
             Assert.IsTrue(page.SuccessMessageLogin.Displayed);
             Assert.AreEqual(text, page.SuccessMessageLogin.Text);
         }
+
+        public static void AssertErrorMessageForInvalidLoginData(this LoginPage page, string text)
+        {
+            Assert.IsTrue(page.ErrorMessageForInvalidLoginData.Displayed);
+            Assert.AreEqual(text, page.ErrorMessageForInvalidLoginData.Text);
+        }
     }
 }

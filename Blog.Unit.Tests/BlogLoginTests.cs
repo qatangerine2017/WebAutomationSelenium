@@ -18,13 +18,14 @@ namespace Blog.Unit.Tests
     [TestFixture]
     public class BlogLoginTests
     {
-        //public IWebDriver driver;
+       // private IWebDriver driver;
         IWebDriver driver = BrowserHost.Instance.Application.Browser;
 
         [SetUp]
         public void Init()
         {
-            this.driver = new ChromeDriver();
+        //    this.driver = new ChromeDriver();
+            this.driver.Manage().Window.Maximize();
         }
 
         [TearDown]
@@ -54,23 +55,67 @@ namespace Blog.Unit.Tests
         // 8. Click Login button
         // 9. Check for success message
 
-        public void NavigateToLoginPage()
+        [Test]
+        [Author("Adelina Yanakieva")]
+        public void CheckIsLoggedInWithValidData()
         {
             var email = "Lili" + DateTime.Now.Ticks + "@mail.bg";
+            var password = "0123456789";
             var registrationPage = new RegistrationPage(this.driver);
-            var registrationUser = new RegisterUser(email, "Lili Ivanova", "0123456789", "0123456789");
+            var registrationUser = new RegisterUser(email, "Lili Ivanova", password, password);
+            registrationPage.NavigateTo();
+
+            registrationPage.FillRegistrationForm(registrationUser); 
+
+            var loginPage = new LoginPage(this.driver);
+            loginPage.LogOffButton.Click();   // ok
+            loginPage.LoginButton.Click();
+            var loginUser = new LoginUser(email, password);
+            loginPage.FillLoginForm(loginUser);
+
+            loginPage.AssertSuccessMessageLogin("Hello");
+        }
+
+        [Test]
+        [Author("Adelina Yanakieva")]
+        public void CheckIsLoggedInWithInvalidPassword()
+        {
+            var email = "Lili" + DateTime.Now.Ticks + "@mail.bg";
+            var password = "0123456789";
+            var registrationPage = new RegistrationPage(this.driver);
+            var registrationUser = new RegisterUser(email, "Lili Ivanova", password, password);
             registrationPage.NavigateTo();
 
             registrationPage.FillRegistrationForm(registrationUser);
 
-            // var homePage = new HomePage(driver);
-            var loginPage = new LoginPage(driver);
-            // PageFactory.InitElements(this.driver, homePage);
+            var loginPage = new LoginPage(this.driver);
+            loginPage.LogOffButton.Click();   
+            loginPage.LoginButton.Click();
+            var loginUser = new LoginUser(email, password + "FALSE");
+            loginPage.FillLoginForm(loginUser);
 
-            //homePage.NavigateTo();
-            // homePage.RegisterButton.Click();
+            loginPage.AssertErrorMessageForInvalidLoginData("Invalid login attempt.");
+        }
 
-            // loginPage.AssertLoginPageIsOpen("Registration");
+        [Test]
+        [Author("Adelina Yanakieva")]
+        public void CheckIsLoggedInWithInvalidEmail()
+        {
+            var email = "Lili" + DateTime.Now.Ticks + "@mail.bg";
+            var password = "0123456789";
+            var registrationPage = new RegistrationPage(this.driver);
+            var registrationUser = new RegisterUser(email, "Lili Ivanova", password, password);
+            registrationPage.NavigateTo();
+
+            registrationPage.FillRegistrationForm(registrationUser);
+
+            var loginPage = new LoginPage(this.driver);
+            loginPage.LogOffButton.Click();
+            loginPage.LoginButton.Click();
+            var loginUser = new LoginUser(email + "FALSE", password);
+            loginPage.FillLoginForm(loginUser);
+
+            loginPage.AssertErrorMessageForInvalidLoginData("Invalid login attempt.");
         }
 
     }
