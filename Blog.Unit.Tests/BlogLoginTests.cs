@@ -53,10 +53,52 @@ namespace Blog.Unit.Tests
             var loginPage = new LoginPage(this.driver);
             loginPage.LogOffButton.Click();   // ok
             loginPage.LoginButton.Click();
-            var loginUser = new LoginUser(email, "0123456789");
+            var loginUser = new LoginUser(email, password);
             loginPage.FillLoginForm(loginUser);
 
             loginPage.AssertSuccessMessageLogin("Hello");
+        }
+
+        [Test]
+        [Author("Adelina Yanakieva")]
+        public void CheckIsLoggedInWithInvalidPassword()
+        {
+            var email = "Lili" + DateTime.Now.Ticks + "@mail.bg";
+            var password = "0123456789";
+            var registrationPage = new RegistrationPage(this.driver);
+            var registrationUser = new RegisterUser(email, "Lili Ivanova", password, password);
+            registrationPage.NavigateTo();
+
+            registrationPage.FillRegistrationForm(registrationUser);
+
+            var loginPage = new LoginPage(this.driver);
+            loginPage.LogOffButton.Click();   
+            loginPage.LoginButton.Click();
+            var loginUser = new LoginUser(email, password + "FALSE");
+            loginPage.FillLoginForm(loginUser);
+
+            loginPage.AssertErrorMessageForInvalidLoginData("Invalid login attempt.");
+        }
+
+        [Test]
+        [Author("Adelina Yanakieva")]
+        public void CheckIsLoggedInWithInvalidEmail()
+        {
+            var email = "Lili" + DateTime.Now.Ticks + "@mail.bg";
+            var password = "0123456789";
+            var registrationPage = new RegistrationPage(this.driver);
+            var registrationUser = new RegisterUser(email, "Lili Ivanova", password, password);
+            registrationPage.NavigateTo();
+
+            registrationPage.FillRegistrationForm(registrationUser);
+
+            var loginPage = new LoginPage(this.driver);
+            loginPage.LogOffButton.Click();
+            loginPage.LoginButton.Click();
+            var loginUser = new LoginUser(email + "FALSE", password);
+            loginPage.FillLoginForm(loginUser);
+
+            loginPage.AssertErrorMessageForInvalidLoginData("Invalid login attempt.");
         }
 
     }
