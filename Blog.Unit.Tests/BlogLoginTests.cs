@@ -43,7 +43,7 @@ namespace Blog.Unit.Tests
         // 1. Navigate to home page
         // 2. Navigate/click on Register
         // 3. Fill register form
-        // 4. Click Register bitton
+        // 4. Click Register button
         //     4.1. Check success message?
         // -------LOG OFF--------
         // 5. Click Log off button
