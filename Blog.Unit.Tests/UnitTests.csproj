@@ -88,6 +88,9 @@
     <Compile Include="ChangePassword.cs" />
     <Compile Include="Models\Article.cs" />
     <Compile Include="Models\Password.cs" />
+    <Compile Include="Pages\ProfileManagementPage\ProfileManagementPage.cs" />
+    <Compile Include="Pages\ProfileManagementPage\ProfileManagementPageAsserter.cs" />
+    <Compile Include="Pages\ProfileManagementPage\ProfileManagementPageMap.cs" />
     <Compile Include="RegisterTests.cs" />
     <Compile Include="BrowserHost.cs" />
     <Compile Include="DeleteArticle.cs" />
