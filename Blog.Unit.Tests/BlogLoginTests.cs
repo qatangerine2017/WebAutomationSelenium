@@ -54,7 +54,7 @@ namespace Blog.Unit.Tests
         // 8. Click Login button
         // 9. Check for success message
 
-        [Test]
+    [Test]
         [Author("Adelina Yanakieva")]
         public void CheckIsLoggedInWithValidData()
         {
@@ -100,7 +100,7 @@ namespace Blog.Unit.Tests
         [Author("Adelina Yanakieva")]
         public void CheckIsLoggedInWithInvalidEmail()
         {
-            var email = "Lili" + DateTime.Now.Ticks + "@mail.bg";
+            var email = "Lili" + DateTime.Now.Minute + "@mail.bg";
             var password = "0123456789";
             var registrationPage = new RegistrationPage(this.driver);
             var registrationUser = new RegisterUser(email, "Lili Ivanova", password, password);

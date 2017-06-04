@@ -74,7 +74,7 @@ namespace UnitTests.Pages.LoginPage
         {
             get
             {   
-                var xpath = "/html/body/div[2]/div/div/form/div[1]/ul/li";
+                var xpath = "/html/body/div[2]/div/div/form/div[1]";
                 this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
                 return this.Driver.FindElement(By.XPath(xpath));
             }
