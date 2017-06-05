@@ -49,16 +49,17 @@ namespace UnitTests.Pages.LoginPage
                 return this.Driver.FindElement(By.XPath(xpath));
             }
         }
-        
+
         public IWebElement LogOffButton
         {
             get
             {
-                var id = "logoutForm";
-                this.Wait.Until(ExpectedConditions.ElementExists(By.Id(id)));
-                return this.Driver.FindElement(By.Id(id));
+                var xpath = "//*[@id=\"logoutForm\"]/ul/li[3]/a";
+                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
+                return this.Driver.FindElement(By.XPath(xpath));
             }
         }
+
 
         public IWebElement SuccessMessageLogin
         {
@@ -73,11 +74,12 @@ namespace UnitTests.Pages.LoginPage
         public IWebElement ErrorMessageForInvalidLoginData
         {
             get
-            {   
+            {
                 var xpath = "/html/body/div[2]/div/div/form/div[1]";
                 this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
                 return this.Driver.FindElement(By.XPath(xpath));
             }
-        }       
+        }
     }
 }
+
