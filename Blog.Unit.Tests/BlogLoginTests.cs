@@ -93,7 +93,7 @@ namespace Blog.Unit.Tests
             var loginUser = new LoginUser(email, password + "FALSE");
             loginPage.FillLoginForm(loginUser);
 
-            loginPage.AssertErrorMessageForInvalidLoginData("The Email field is required.");
+            loginPage.AssertErrorMessageForInvalidLoginData("Invalid login attempt.");
         }
 
         [Test]
