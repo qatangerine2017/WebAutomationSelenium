@@ -14,9 +14,9 @@ namespace UnitTests.Pages.RegistrationPage
         {
             get
             {
-                var xpath = "//*[@id=\"registerLink\"]";
-                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
-                return this.Driver.FindElement(By.XPath(xpath));
+                var id = "registerLink";
+                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(id)));
+                return this.Driver.FindElement(By.XPath(id));
             }
         }
         public IWebElement Email
