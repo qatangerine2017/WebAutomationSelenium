@@ -30,7 +30,7 @@ namespace Blog.Unit.Tests
         [TearDown]
         public void CleanUp()
         {
-            this.driver.Quit();
+           // this.driver.Quit();
         }
 
         public void Type(IWebElement element, string text)
@@ -79,7 +79,7 @@ namespace Blog.Unit.Tests
         [Author("Adelina Yanakieva")]
         public void CheckIsLoggedInWithInvalidPassword()
         {
-            var email = "Lili" + DateTime.Now.Ticks + "@mail.bg";
+            var email = "Lili" + DateTime.Now.Minute + "@mail.bg";
             var password = "0123456789";
             var registrationPage = new RegistrationPage(this.driver);
             var registrationUser = new RegisterUser(email, "Lili Ivanova", password, password);
