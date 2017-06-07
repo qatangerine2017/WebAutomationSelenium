@@ -13,7 +13,7 @@ using UnitTests.Pages.RegistrationPage;
 namespace Blog.Unit.Tests
 {
     [TestFixture]
-    public class ChangePassword
+    public class ChangePasswordTests
     {
         private IWebDriver driver;
 

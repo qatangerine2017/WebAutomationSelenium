@@ -16,7 +16,7 @@ using UnitTests.Pages.RegistrationPage;
 namespace Blog.Unit.Tests
 {
     [TestFixture]
-    public class BlogLoginTests
+    public class LoginTests
     {
         private IWebDriver driver;
 
