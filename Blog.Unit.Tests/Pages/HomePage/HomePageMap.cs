@@ -10,22 +10,29 @@ namespace UnitTests.Pages.HomePage
 {
     public partial class HomePage : BasePage
     {
-        public HomePage(IWebDriver driver)
-            : base(driver)
-        {
-        }
-
-        public string URL
+        public IWebElement RegirstratonButton
         {
             get
             {
-                return Url;
+                return this.Driver.FindElement(By.PartialLinkText("Register"));
             }
         }
+        /* public HomePage(IWebDriver driver)
+             : base(driver)
+         {
+         }
 
-        public void NavigateTo()
-        {
-            this.Driver.Navigate().GoToUrl(this.URL);
-        }
+         public string URL
+         {
+             get
+             {
+                 return Url;
+             }
+         }
+
+         public void NavigateTo()
+         {
+             this.Driver.Navigate().GoToUrl(this.URL);
+         } */
     }
 }

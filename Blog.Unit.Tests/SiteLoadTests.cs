@@ -9,19 +9,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnitTests;
 using UnitTests.Pages.RegistrationPage;
 
-namespace UnitTests
+namespace SiteLoadTests
 {
     [TestFixture]
-    public class UnitTests
+    public class SiteLoadTests
     {
         public IWebDriver driver;
 
         [SetUp]
         public void Init()
         {
-            this.driver = new ChromeDriver();
+            // this.driver = new ChromeDriver();
+            IWebDriver driver = BrowserHost.Instance.Application.Browser;
             this.driver.Manage().Window.Maximize();
         }
 
@@ -32,7 +34,8 @@ namespace UnitTests
         }
 
         [Test]
-        public void CheckSiteLoad()
+        [Author("Viara Vasileva")]
+        public void SiteLoadCheck()
         {
             IWebDriver driver = BrowserHost.Instance.Application.Browser;
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
