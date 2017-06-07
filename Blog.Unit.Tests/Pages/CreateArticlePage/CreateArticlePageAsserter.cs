@@ -13,5 +13,20 @@ namespace UnitTests.Pages.CreateArticlePage
         {
             Assert.IsTrue(page.NewArticle.Displayed);
         }
+
+        public static void AssertTititleArticleIsCreated(this CreateArticlePage page, string text)
+        {
+            Assert.AreEqual(text, page.TitleField.Text);
+        }
+
+        public static void AssertContentArticleIsCreated(this CreateArticlePage page, string text)
+        {
+            Assert.AreEqual(text, page.ContentField.Text);
+        }
+
+        public static void AssertArticleWithoutTitleError(this CreateArticlePage page, string text)
+        {
+            Assert.AreEqual(text, page.ErrorMessageForArticleWithoutTitle.Text);
+        }
     }
 }

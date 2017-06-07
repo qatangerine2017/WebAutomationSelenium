@@ -20,8 +20,8 @@ namespace Blog.Unit.Tests
         [SetUp]
         public void Init()
         {
-            this.driver = BrowserHost.Instance.Application.Browser;  //new ChromeDriver();
-            this.driver.Manage().Window.Maximize();
+            this.driver = new ChromeDriver(); //this.driver = BrowserHost.Instance.Application.Browser;
+           // this.driver.Manage().Window.Maximize();
         }
 
         [TearDown]
@@ -37,7 +37,7 @@ namespace Blog.Unit.Tests
         {
             var email = "Nadeto" + DateTime.Now.Ticks + "@abv.bg";
             var registrationPage = new RegistrationPage(this.driver);
-            var registrationUser = new RegisterUser(email, "Nadeto Petrova", "petrovanadeto", "petrovanadeto");
+            var registrationUser = new RegisterUser(email, "Nadeto Petrova", "0123456789", "0123456789");
             registrationPage.NavigateTo();
 
             registrationPage.FillRegistrationForm(registrationUser);
@@ -45,10 +45,31 @@ namespace Blog.Unit.Tests
             var createdArticle = new CreateArticlePage(this.driver);
 
             var newArticle = new Article("Yep!", "The first Article is here!");
+            
+            createdArticle.CreateArticle(newArticle);
+
+            createdArticle.AssertTititleArticleIsCreated("Yep!");
+            createdArticle.AssertContentArticleIsCreated("The first Article is here!");
+        }
+
+        [Test]
+        [Author("Viara Vasileva")]
+        public void CreateNewArticleWithoutTitle()
+        {
+            var email = "Nadeto" + DateTime.Now.Ticks + "@abv.bg";
+            var registrationPage = new RegistrationPage(this.driver);
+            var registrationUser = new RegisterUser(email, "Nadeto Petrova", "0123456789", "0123456789");
+            registrationPage.NavigateTo();
+
+            registrationPage.FillRegistrationForm(registrationUser);
+
+            var createdArticle = new CreateArticlePage(this.driver);
+
+            var newArticle = new Article("", "The first Article is here!");
 
             createdArticle.CreateArticle(newArticle);
 
-            createdArticle.AssertArticleIsCreated("The new article is visible!");
+            createdArticle.AssertArticleWithoutTitleError("The Title field is required.");
         }
     }
 }

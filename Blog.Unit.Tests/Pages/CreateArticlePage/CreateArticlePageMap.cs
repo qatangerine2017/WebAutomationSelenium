@@ -94,6 +94,7 @@ namespace UnitTests.Pages.CreateArticlePage
         { 
             get
             {
+                             
                 var xpath = "/html/body/div[2]/div/div/form/div[1]/ul/li[1]";
                 this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
                 return this.Driver.FindElement(By.XPath(xpath));
@@ -109,5 +110,9 @@ namespace UnitTests.Pages.CreateArticlePage
                 return this.Driver.FindElement(By.XPath(xpath));
             }
         }
+
+        public IWebElement TitleField => this.Driver.FindElement(By.XPath("html/body/div[2]/div/div/div/article/header/h2/a"));
+
+        public IWebElement ContentField => this.Driver.FindElement(By.XPath("html/body/div[2]/div/div/div/article/p"));
     }
 }
