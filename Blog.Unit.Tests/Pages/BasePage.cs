@@ -11,6 +11,7 @@ namespace UnitTests.Pages
     public class BasePage
     {
         public string Url = @"http://localhost:60634/Article/List/";
+        //public string Url = @"http://localhost:60634"; this path is the right one
         private IWebDriver driver;
         private WebDriverWait wait;
 

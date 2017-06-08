@@ -20,6 +20,7 @@ namespace UnitTests.Pages.RegistrationPage
             get
             {
                 return base.Url + "Register/";
+                // return base.Url + "/Account/Register";   this path is the right one
             }
         }
 
