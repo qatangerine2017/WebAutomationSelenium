@@ -9,9 +9,13 @@ namespace UnitTests.Pages.EditArticlePage
 {
     public static class EditArticlePageAsserter
     {
-        public static void Name(this EditArticlePage page, string text)
+        public static void AssertArticleTitleIsEdit(this EditArticlePage page, string text)
         {
-            Assert.IsTrue(true);
+            Assert.AreEqual(text, page.EditTitle.Text);
+        }
+        public static void AssertArticleContentIsEdit(this EditArticlePage page, string text)
+        {
+            Assert.AreEqual(text, page.EditContent.Text);
         }
     }
 }
