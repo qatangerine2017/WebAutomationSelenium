@@ -14,9 +14,9 @@ namespace UnitTests.Pages.LoginPage
         {
             get
             {
-                var xpath = "//*[@id=\"loginLink\"]";
-                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
-                return this.Driver.FindElement(By.XPath(xpath));
+                var id = "loginLink";
+                this.Wait.Until(ExpectedConditions.ElementExists(By.Id(id)));
+                return this.Driver.FindElement(By.Id(id));
             }
         }
 
