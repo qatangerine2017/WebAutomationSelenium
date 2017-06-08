@@ -27,8 +27,8 @@ namespace UnitTests.Pages.LoginPage
         public void FillLoginForm(LoginUser user)
         {
             this.LoginButton.Click();
-            Type(this.Email, user.Email);
-            Type(this.Password, user.Password);
+             Type(this.Email, user.Email);
+             Type(this.Password, user.Password);
             this.LogIn.Click();
         }
 

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UnitTests.Pages.EditArticlePage
+namespace UnitTests.Pages.ManageAccountPage
 {
-    public partial class EditArticlePage
+    public partial class ManageAccountPage
     {
     }
 }

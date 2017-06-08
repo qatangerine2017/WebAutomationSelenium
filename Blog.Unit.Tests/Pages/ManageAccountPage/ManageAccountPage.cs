@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 
-namespace UnitTests.Pages.EditArticlePage
+namespace UnitTests.Pages.ManageAccountPage
 {
-    public partial class EditArticlePage : BasePage
+    public partial class ManageAccountPage : BasePage
     {
-        public EditArticlePage(IWebDriver driver) : base(driver)
+        public ManageAccountPage(IWebDriver driver) : base(driver)
         {
         }
     }

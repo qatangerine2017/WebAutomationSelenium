@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 
-namespace UnitTests.Pages.EditArticlePage
+namespace UnitTests.Pages.ManageAccountPage
 {
-    public static class EditArticlePageAsserter
+    public static class ManageAccountPageAsserter
     {
-        public static void Name(this EditArticlePage page, string text)
+        public static void Name(this ManageAccountPage page, string text)
         {
             Assert.IsTrue(true);
         }

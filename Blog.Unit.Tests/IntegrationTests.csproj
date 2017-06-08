@@ -87,9 +87,7 @@
     <Compile Include="BlogLoginTests.cs" />
     <Compile Include="ChangePassword.cs" />
     <Compile Include="CreateArticleTests.cs" />
-    <Compile Include="EditArticleTests.cs" />
     <Compile Include="Models\Article.cs" />
-    <Compile Include="Models\EditArticle.cs" />
     <Compile Include="Models\Password.cs" />
     <Compile Include="RegisterTests.cs" />
     <Compile Include="BrowserHost.cs" />
@@ -115,6 +113,9 @@
     <Compile Include="Pages\LoginPage\LoginPage.cs" />
     <Compile Include="Pages\LoginPage\LoginPageAsserter.cs" />
     <Compile Include="Pages\LoginPage\LoginPageMap.cs" />
+    <Compile Include="Pages\ManageAccountPage\ManageAccountPage.cs" />
+    <Compile Include="Pages\ManageAccountPage\ManageAccountPageAsserter.cs" />
+    <Compile Include="Pages\ManageAccountPage\ManageAccountPageMap.cs" />
     <Compile Include="Pages\RegistrationPage\RegistrationPage.cs" />
     <Compile Include="Pages\RegistrationPage\RegistrationPageAsserter.cs" />
     <Compile Include="Pages\RegistrationPage\RegistrationPageMap.cs" />
@@ -126,9 +127,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
