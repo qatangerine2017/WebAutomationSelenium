@@ -22,7 +22,7 @@ namespace Blog.Unit.Tests
 
         [SetUp]
         public void Init()
-        {
+        {   
             this.driver = new ChromeDriver();
             this.driver.Manage().Window.Maximize();
         }
@@ -30,7 +30,7 @@ namespace Blog.Unit.Tests
         [TearDown]
         public void CleanUp()
         {
-           // this.driver.Quit();
+            this.driver.Quit();
         }
 
         public void Type(IWebElement element, string text)
