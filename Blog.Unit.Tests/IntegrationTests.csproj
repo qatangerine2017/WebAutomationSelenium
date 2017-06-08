@@ -86,6 +86,7 @@
   <ItemGroup>
     <Compile Include="BlogLoginTests.cs" />
     <Compile Include="ChangePassword.cs" />
+    <Compile Include="CreateArticleTests.cs" />
     <Compile Include="Models\Article.cs" />
     <Compile Include="Models\Password.cs" />
     <Compile Include="RegisterTests.cs" />
@@ -122,7 +123,7 @@
     <Compile Include="Pages\ReviewingArticlePage\ReviewingArticlePageAsserter.cs" />
     <Compile Include="Pages\ReviewingArticlePage\ReviewingArticlePageMap.cs" />
     <Compile Include="ReviewingArticle.cs" />
-    <Compile Include="UnitTests.cs" />
+    <Compile Include="SiteLoadTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
