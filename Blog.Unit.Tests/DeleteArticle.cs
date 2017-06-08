@@ -16,7 +16,7 @@ using UnitTests.Pages.RegistrationPage;
 namespace Blog.Unit.Tests
 {
     [TestFixture]
-    public class DeleteArticleTests
+    public class DeleteArticle
     {
         private IWebDriver driver;
 

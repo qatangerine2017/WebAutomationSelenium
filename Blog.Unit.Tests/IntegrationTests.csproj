@@ -84,13 +84,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LoginTests.cs" />
-    <Compile Include="ChangePasswordTests.cs" />
+    <Compile Include="BlogLoginTests.cs" />
+    <Compile Include="ChangePassword.cs" />
     <Compile Include="Models\Article.cs" />
     <Compile Include="Models\Password.cs" />
     <Compile Include="RegisterTests.cs" />
     <Compile Include="BrowserHost.cs" />
-    <Compile Include="DeleteArticleTests.cs" />
+    <Compile Include="DeleteArticle.cs" />
     <Compile Include="Models\LoginUser.cs" />
     <Compile Include="Models\RegistrerUser.cs" />
     <Compile Include="Pages\BasePage.cs" />
@@ -121,7 +121,7 @@
     <Compile Include="Pages\ReviewingArticlePage\ReviewingArticlePage.cs" />
     <Compile Include="Pages\ReviewingArticlePage\ReviewingArticlePageAsserter.cs" />
     <Compile Include="Pages\ReviewingArticlePage\ReviewingArticlePageMap.cs" />
-    <Compile Include="ReviewingArticleTests.cs" />
+    <Compile Include="ReviewingArticle.cs" />
     <Compile Include="UnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
