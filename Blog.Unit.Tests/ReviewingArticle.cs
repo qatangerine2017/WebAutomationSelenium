@@ -50,6 +50,7 @@ namespace Blog.Unit.Tests
             createdArticle.CreateArticle(newArticle);
 
             createdArticle.AssertArticleIsCreated("The new article is visible!");
+            createdArticle.DeleteArticle(newArticle);
         }
         [Test]
         [Author("Hristina Mineva")]
@@ -69,6 +70,7 @@ namespace Blog.Unit.Tests
             createdArticle.CreateArticle(newArticle);
 
             createdArticle.AssertArticleIsCreatedWithoutTitle("The Title field is required.");
+
         }
         [Test]
         [Author("Hristina Mineva")]
@@ -88,6 +90,7 @@ namespace Blog.Unit.Tests
             createdArticle.CreateArticle(newArticle);
 
             createdArticle.AssertArticleCreatedWithoutContent("The Content field is required.");
+
         }
         [Test]
         [Author("Hristina Mineva")]

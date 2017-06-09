@@ -65,7 +65,7 @@ namespace Blog.Unit.Tests
             var existingArticle = new DeleteArticlePage(this.driver);
             existingArticle.NavigateTo();
 
-            existingArticle.CheckForExistingArticle(newArticle);            
+            existingArticle.CheckForExistingArticle(newArticle);
         }
     }
 }

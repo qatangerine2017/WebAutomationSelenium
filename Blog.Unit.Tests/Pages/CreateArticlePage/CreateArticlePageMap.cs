@@ -54,7 +54,7 @@ namespace UnitTests.Pages.CreateArticlePage
         {
             get
             {
-                var xpath = "/html/body/div[2]/div/div/div";
+                var xpath = "/html/body/div[2]/div/div/div[41]/article/header/h2/a";
                 this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
                 return this.Driver.FindElement(By.XPath(xpath));
             }
@@ -106,6 +106,33 @@ namespace UnitTests.Pages.CreateArticlePage
             get
             {
                 var xpath = "/html/body/div[2]/div/div/form/div[1]/ul/li[2]";
+                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
+                return this.Driver.FindElement(By.XPath(xpath));
+            }
+        }
+        public IWebElement DeleteButton
+        {
+            get
+            {
+                var xpath = "/html/body/div[2]/div/article/footer/a[2]";
+                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
+                return this.Driver.FindElement(By.XPath(xpath));
+            }
+        }
+        public IWebElement Delete
+        {
+            get
+            {
+                var xpath = "/html/body/div[2]/div/div/form/div[3]/div/input";
+                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
+                return this.Driver.FindElement(By.XPath(xpath));
+            }
+        }
+        public IWebElement CreatedArticle
+        {
+            get
+            {
+                var xpath = "/html/body/div[2]/div/div/div[43]/article/header/h2/a";
                 this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
                 return this.Driver.FindElement(By.XPath(xpath));
             }

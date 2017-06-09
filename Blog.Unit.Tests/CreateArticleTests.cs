@@ -28,8 +28,7 @@ namespace Blog.Unit.Tests
         [TearDown]
         public void CleanUp()
         {
-            //  this.driver.Close();
-            //  this.driver.Quit();
+              this.driver.Quit();
         }
 
         [Test]
@@ -51,6 +50,8 @@ namespace Blog.Unit.Tests
 
             createdArticle.AssertTititleArticleIsCreated("Yep!");
             createdArticle.AssertContentArticleIsCreated("The first Article is here!");
+
+            createdArticle.DeleteArticle(newArticle);
         }
 
         [Test]

@@ -20,6 +20,13 @@ namespace UnitTests.Pages.CreateArticlePage
             Type(this.Title, article.Title);
             Type(this.Content, article.Content);
             this.CreateArticleButton.Click();
+
+        }
+        public void DeleteArticle(Article article)
+        {
+            this.CreatedArticle.Click();
+            this.DeleteButton.Click();
+            this.Delete.Click();
         }
 
         private void Type(IWebElement element, string text)
