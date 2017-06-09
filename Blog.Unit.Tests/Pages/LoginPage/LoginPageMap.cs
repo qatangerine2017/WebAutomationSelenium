@@ -15,7 +15,7 @@ namespace UnitTests.Pages.LoginPage
             get
             {
                 var id = "loginLink";
-                this.Wait.Until(ExpectedConditions.ElementExists(By.Id(id)));
+             //   this.Wait.Until(ExpectedConditions.ElementExists(By.Id(id)));
                 return this.Driver.FindElement(By.Id(id));
             }
         }
