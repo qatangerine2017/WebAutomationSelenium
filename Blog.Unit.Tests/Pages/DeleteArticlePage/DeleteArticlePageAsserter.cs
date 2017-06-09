@@ -17,5 +17,9 @@ namespace UnitTests.Pages.DeleteArticlePage
         {
             Assert.IsTrue(page.ErrorMessageForDeletingArticle.Displayed);
         }
+        public static void AssertTheArticleIsDeleted(this DeleteArticlePage page, string text)
+        {
+            Assert.IsTrue(page.EmptyArticle.Displayed);
+        }
     }
 }

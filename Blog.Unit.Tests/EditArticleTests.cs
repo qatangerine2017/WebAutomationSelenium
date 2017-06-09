@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnitTests.Pages.CreateArticlePage;
+using UnitTests.Pages.DeleteArticlePage;
 using UnitTests.Pages.EditArticlePage;
 using UnitTests.Pages.LoginPage;
 using UnitTests.Pages.RegistrationPage;
@@ -31,41 +32,40 @@ namespace Blog.Unit.Tests
         {
             this.driver.Quit();
         }
+       
         [Test]
         [Author("Hristina Mineva")]
         public void CheckArticleIsEdit()
         {
-            EditArticlePage editArticlePage = new EditArticlePage(this.driver);
-            CreateArticlePage createArticlePage = new CreateArticlePage(this.driver);
-            RegistrationPage registrationPage = new RegistrationPage(this.driver);
-            LoginPage loginPage = new LoginPage(this.driver);
-            var email = "Test" + DateTime.Now.Hour + "@mail.bg";
-            var password = "123456789";
-            var name = "Test";
-            RegisterUser user = new RegisterUser(email, name, password, password);
-            LoginUser loginUser = new LoginUser(email, password);
-            var title = "Article Title!";
-            var content = "Article Content!";
-            Article article = new Article(title, content);
-            var editTitle = "Article Title Changed!";
-            var editContent = "Article Content Changed!";
-            EditArticle editArticle = new EditArticle(editTitle, editContent);
-            editArticlePage.NavigateTo();
-            if (editArticlePage.CreatedArticle.Displayed && editArticlePage.EditTitle.Text == "Article Title!")
-            {
-                loginPage.FillLoginForm(loginUser);
-                editArticlePage.EditArticle(editArticle);
-                editArticlePage.AssertArticleTitleIsEdit("Article Title Changed!");
-                editArticlePage.AssertArticleContentIsEdit("Article Content Changed!");
-            }
-            else
-            {
-                registrationPage.FillRegistrationForm(user);
-                createArticlePage.CreateArticle(article);
-                editArticlePage.EditArticle(editArticle);
-                editArticlePage.AssertArticleTitleIsEdit("Article Title Changed!");
-                editArticlePage.AssertArticleContentIsEdit("Article Content Changed!");
-            }
+            var email = "Katy" + DateTime.Now.Ticks + "@abv.bg";
+            var registrationPage = new RegistrationPage(this.driver);
+            var registrationUser = new RegisterUser(email, "Katy Perry", "0123456789", "0123456789");
+            registrationPage.NavigateTo();
+
+            registrationPage.FillRegistrationForm(registrationUser);
+
+            var createdArticle = new CreateArticlePage(this.driver);
+
+            var newArticle = new Article("Hello!", "I am new article!");
+
+            createdArticle.CreateArticle(newArticle);
+            createdArticle.LogOffButton.Click();
+
+            var logForm = new LoginPage(this.driver);
+            var loginUser = new LoginUser(email, "0123456789");
+            logForm.FillLoginForm(loginUser);
+
+            var editArticlePage = new EditArticlePage(this.driver);
+            var editArticle = new EditArticle("Hello World!", "I am new article again!");
+            editArticlePage.EditArticle(editArticle);
+
+            editArticlePage.AssertArticleTitleIsEdit("Hello World!");
+            editArticlePage.AssertArticleContentIsEdit("I am new article again!");
+
+            var existingArticle = new DeleteArticlePage(this.driver);
+            existingArticle.NavigateTo();
+
+            existingArticle.CheckForExistingArticle(newArticle);            
         }
     }
 }

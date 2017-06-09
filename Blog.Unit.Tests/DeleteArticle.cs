@@ -60,14 +60,7 @@ namespace Blog.Unit.Tests
 
             existingArticle.CheckForExistingArticle(newArticle);
 
-            if (existingArticle.Error403.Displayed)
-            {
-                return;
-            }
-            if (!existingArticle.Error403.Displayed && existingArticle.EmptyPage.Displayed)
-            {
-                existingArticle.AssertTheBlogIsEmpty("The article is deleted!");
-            }
+            existingArticle.AssertTheArticleIsDeleted("The article is deleted!");
         }
     }
 }

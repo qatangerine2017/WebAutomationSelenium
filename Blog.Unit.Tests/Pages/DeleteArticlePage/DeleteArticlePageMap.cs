@@ -32,7 +32,7 @@ namespace UnitTests.Pages.DeleteArticlePage
         {
             get
             {
-                var xpath = "/html/body/div[2]/div/div/div[1]/article/header/h2/a";
+                var xpath = "/html/body/div[2]/div/div/div[37]/article/header/h2/a";
                 this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
                 return this.Driver.FindElement(By.XPath(xpath));
             }
@@ -78,6 +78,15 @@ namespace UnitTests.Pages.DeleteArticlePage
             get
             {
                 var xpath = "//*[@id=\"content\"]";
+                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
+                return this.Driver.FindElement(By.XPath(xpath));
+            }
+        }
+        public IWebElement EmptyArticle
+        {
+            get
+            {
+                var xpath = "/html/body/div[2]/hr";
                 this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
                 return this.Driver.FindElement(By.XPath(xpath));
             }
