@@ -59,10 +59,10 @@ namespace UnitTests.Pages.EditArticlePage
         {
             get
             {
-                var xpath = "/html/body/div[2]/div/div/div/article/header/h2/a";
+                var xpath = "/html/body/div [2]/div/div/div [31]/article/header/h2/a";
                 this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
                 return this.Driver.FindElement(By.XPath(xpath));
-            }
+            }// html / body / div[2] / div / div / div / article / header / h2 / a
         }
         public IWebElement EditContent
         {

@@ -51,7 +51,7 @@ namespace Blog.Unit.Tests
             var editContent = "Article Content Changed!";
             EditArticle editArticle = new EditArticle(editTitle, editContent);
             editArticlePage.NavigateTo();
-            if (editArticlePage.CreatedArticle.Displayed)
+            if (editArticlePage.CreatedArticle.Displayed && editArticlePage.EditTitle.Text == "Article Title!")
             {
                 loginPage.FillLoginForm(loginUser);
                 editArticlePage.EditArticle(editArticle);

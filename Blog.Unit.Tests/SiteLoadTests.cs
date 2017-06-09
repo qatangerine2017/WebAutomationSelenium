@@ -22,8 +22,8 @@ namespace SiteLoadTests
         [SetUp]
         public void Init()
         {
-            // this.driver = new ChromeDriver();
-            IWebDriver driver = BrowserHost.Instance.Application.Browser;
+             this.driver = new ChromeDriver();
+          //  IWebDriver driver = BrowserHost.Instance.Application.Browser;
             this.driver.Manage().Window.Maximize();
         }
 
