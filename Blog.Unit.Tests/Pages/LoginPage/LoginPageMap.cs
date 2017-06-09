@@ -54,9 +54,9 @@ namespace UnitTests.Pages.LoginPage
         {
             get
             {
-                var id = "logoutForm";
-                this.Wait.Until(ExpectedConditions.ElementExists(By.Id(id)));
-                return this.Driver.FindElement(By.Id(id));
+                var xpath = "//*[@id=\"logoutForm\"]/ul/li[3]/a";
+                this.Wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
+                return this.Driver.FindElement(By.XPath(xpath));
             }
         }
 
